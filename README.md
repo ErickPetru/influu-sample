@@ -45,7 +45,7 @@ $ npm run analyze
 
 ## Publicando
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/9b43cfee-11fa-4a10-a9cd-d49435b2b329/deploy-status)](https://app.netlify.com/sites/fatectq/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ae7b31a1-4398-4b4d-aea3-bfb4926e627f/deploy-status)](https://app.netlify.com/sites/influu-sample/deploys)
 
 Para fins de testes durante o desenvolvimento, este projeto é automaticamente publicado através da [Netlify](https://netlifly.com/) quando novas mudanças são recebidas no _branch_ `master`. Portanto, para publicar uma alteração, basta enviar o _pull_ para tal _branch_.
 
