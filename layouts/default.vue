@@ -2,19 +2,19 @@
 export default {
   name: 'LayoutDefault',
   components: {
-    AppHeader: () => import('~/components/AppHeader'),
-    AppFooter: () => import('~/components/AppFooter')
+    Header: () => import('~/components/Header'),
+    Footer: () => import('~/components/Footer')
   }
 }
 </script>
 
 <template>
-  <div id="app">
-    <AppHeader />
+  <div id="app" class="antialiased text-gray-500 font-base">
+    <Header />
 
     <!-- Conteúdo injetado dinamicamente -->
     <nuxt />
 
-    <AppFooter />
+    <Footer />
   </div>
 </template>
