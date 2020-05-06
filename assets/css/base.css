@@ -38,4 +38,8 @@ body {
   .outline-offset-outer {
     outline-offset: 2px;
   }
+
+  .outline-none:focus {
+    outline: 0;
+  }
 }
