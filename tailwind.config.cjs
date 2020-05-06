@@ -71,7 +71,9 @@ module.exports = {
       colors: {
         white: {
           'default': 'var(--color-white-default)',
+          '95': 'var(--color-white-95)',
           '90': 'var(--color-white-90)',
+          '80': 'var(--color-white-80)',
           '75': 'var(--color-white-75)',
           '70': 'var(--color-white-70)',
           '60': 'var(--color-white-60)',
@@ -79,7 +81,9 @@ module.exports = {
           '40': 'var(--color-white-40)',
           '30': 'var(--color-white-30)',
           '25': 'var(--color-white-25)',
-          '10': 'var(--color-white-10)'
+          '20': 'var(--color-white-20)',
+          '10': 'var(--color-white-10)',
+          '5': 'var(--color-white-5)'
         },
 
         gray: {

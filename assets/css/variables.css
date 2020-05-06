@@ -1,6 +1,8 @@
 :root {
   --color-white-default: #fff;
+  --color-white-95: rgba(255, 255, 255, 0.95);
   --color-white-90: rgba(255, 255, 255, 0.9);
+  --color-white-80: rgba(255, 255, 255, 0.8);
   --color-white-75: rgba(255, 255, 255, 0.75);
   --color-white-70: rgba(255, 255, 255, 0.7);
   --color-white-60: rgba(255, 255, 255, 0.6);
@@ -8,7 +10,9 @@
   --color-white-40: rgba(255, 255, 255, 0.4);
   --color-white-30: rgba(255, 255, 255, 0.3);
   --color-white-25: rgba(255, 255, 255, 0.25);
+  --color-white-20: rgba(255, 255, 255, 0.2);
   --color-white-10: rgba(255, 255, 255, 0.1);
+  --color-white-5: rgba(255, 255, 255, 0.05);
 
   --color-gray-100: #f5f6fd;
   --color-gray-200: #dbdef1;
@@ -30,13 +34,13 @@
   --color-purple-800: #320b44;
   --color-purple-900: #1D0D36;
 
-  --color-pink-100: #964f92;
-  --color-pink-200: #975092;
+  --color-pink-100: #f9b4d2;
+  --color-pink-200: #964f92;
   --color-pink-300: #903b85;
   --color-pink-400: #db5097;
   --color-pink-500: #d94e96;
   --color-pink-600: #c53a97;
   --color-pink-700: #eb3f87;
   --color-pink-800: #e22788;
-  --color-pink-900: #aa107c;
+  --color-pink-900: #872a5a;
 }
