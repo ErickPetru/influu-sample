@@ -3,3 +3,30 @@ body {
   background: var(--color-gray-100);
   height: 100%;
 }
+
+@responsive {
+  .transition-default {
+    @apply transition-colors;
+    @apply duration-300;
+    @apply ease-in-out;
+  }
+
+  .hoverable {
+    @apply transition-default;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .focusable {
+    @apply transition-default;
+    outline: 1px solid color-mod(var(--color-pink-500) a(0%));
+    outline-offset: -3px;
+  }
+
+  .focusable:focus {
+    outline-color: var(--color-pink-500);
+  }
+
+  .outline-offset-outer {
+    outline-offset: 2px;
+  }
+}
