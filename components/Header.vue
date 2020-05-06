@@ -8,6 +8,8 @@ export default {
   },
   components: {
     Logo: () => import('@/components/Logo'),
+    Menu: () => import('@/components/Menu'),
+
     IconDropdownArrow: () =>
       import('@/assets/img/icon-dropdown-arrow.svg?inline'),
     IconYouTube: () => import('@/assets/img/icon-youtube.svg?inline'),
@@ -19,6 +21,7 @@ export default {
   },
   data () {
     return {
+      showMenu: false,
       showNetworks: false,
       documentWidth: 0
     }
@@ -28,8 +31,16 @@ export default {
       return this.documentWidth < 768
     },
 
+    isMobile () {
+      return this.documentWidth < 1024
+    },
+
     isNetworksVisible () {
       return !this.isSmartphone || this.showNetworks
+    },
+
+    isMenuVisible () {
+      return this.isMobile && this.showMenu
     }
   },
   methods: {
@@ -49,29 +60,61 @@ export default {
       <div class="flex items-center justify-between">
         <Logo />
 
-        <nav>
-          <a href="#menu" class="flex items-center px-2 py-3 hoverable focusable hover:text-pink-800 lg:hidden" @click.prevent>
+        <nav class="overflow-hidden">
+          <a
+            href="#menu"
+            class="flex items-center px-2 py-3 hoverable focusable hover:text-pink-800 lg:hidden"
+            @click.prevent="showMenu = !showMenu"
+          >
             <IconMenu class="h-5" />
           </a>
 
+          <transition name="fade">
+            <Menu v-if="isMenuVisible" @close="showMenu = false" />
+          </transition>
+
           <ul class="hidden text-sm font-light uppercase lg:flex">
             <li class="flex mr-1">
-              <a href="#diversos" class="px-4 py-2 hoverable focusable hover:text-pink-800" @click.prevent>Diversos</a>
+              <a
+                href="#diversos"
+                class="px-4 py-2 hoverable focusable hover:text-pink-800"
+                @click.prevent
+              >Diversos</a>
             </li>
             <li class="flex mr-1">
-              <a href="#influenciadores" class="px-4 py-2 hoverable focusable hover:text-pink-800" @click.prevent>Influenciadores</a>
+              <a
+                href="#influenciadores"
+                class="px-4 py-2 hoverable focusable hover:text-pink-800"
+                @click.prevent
+              >Influenciadores</a>
             </li>
             <li class="flex mr-1">
-              <a href="#marketing" class="px-4 py-2 hoverable focusable hover:text-pink-800" @click.prevent>Marketing</a>
+              <a
+                href="#marketing"
+                class="px-4 py-2 hoverable focusable hover:text-pink-800"
+                @click.prevent
+              >Marketing</a>
             </li>
             <li class="flex mr-1">
-              <a href="#noticias" class="px-4 py-2 hoverable focusable hover:text-pink-800" @click.prevent>Notícias</a>
+              <a
+                href="#noticias"
+                class="px-4 py-2 hoverable focusable hover:text-pink-800"
+                @click.prevent
+              >Notícias</a>
             </li>
             <li class="flex mr-1">
-              <a href="#canal-influu" class="px-4 py-2 hoverable focusable hover:text-pink-800" @click.prevent>Canal Influu</a>
+              <a
+                href="#canal-influu"
+                class="px-4 py-2 hoverable focusable hover:text-pink-800"
+                @click.prevent
+              >Canal Influu</a>
             </li>
             <li class="flex">
-              <a href="#pesquisar" class="flex items-center px-2 py-1 hoverable focusable hover:text-pink-800" @click.prevent>
+              <a
+                href="#pesquisar"
+                class="flex items-center px-2 py-1 hoverable focusable hover:text-pink-800"
+                @click.prevent
+              >
                 <IconSearch class="h-4" />
               </a>
             </li>
@@ -119,7 +162,7 @@ export default {
               <a
                 href="https://www.youtube.com/"
                 target="_blank"
-                class="flex px-5 py-2 border-b hoverable focusable hover:text-pink-800 border-white-40 md:border-b-0 md:border-r md:py-4 lg:px-6 xl:px-8"
+                class="flex px-5 py-2 border-b hoverable focusable hover:text-pink-800 border-white-10 md:border-b-0 md:border-r md:border-white-40 md:py-4 lg:px-6 xl:px-8"
               >
                 <IconYouTube class="w-8 mr-3 text-2xl" />
 
@@ -136,7 +179,7 @@ export default {
               <a
                 href="https://www.instagram.com/"
                 target="_blank"
-                class="flex px-5 py-2 border-b hoverable focusable hover:text-pink-800 border-white-40 md:border-b-0 md:border-r md:py-4 lg:px-6 xl:px-8"
+                class="flex px-5 py-2 border-b hoverable focusable hover:text-pink-800 border-white-10 md:border-b-0 md:border-r md:border-white-40 md:py-4 lg:px-6 xl:px-8"
               >
                 <IconInstagram class="w-6 ml-1 mr-4 text-2xl" />
 
@@ -153,7 +196,7 @@ export default {
               <a
                 href="https://www.facebook.com/"
                 target="_blank"
-                class="flex px-5 py-2 border-b hoverable focusable hover:text-pink-800 border-white-40 md:border-b-0 md:border-r md:py-4 lg:px-6 xl:px-8"
+                class="flex px-5 py-2 border-b hoverable focusable hover:text-pink-800 border-white-10 md:border-b-0 md:border-r md:border-white-40 md:py-4 lg:px-6 xl:px-8"
               >
                 <IconFacebook class="w-6 ml-1 mr-4 text-2xl" />
 
