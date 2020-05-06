@@ -23,3 +23,62 @@
   transform: translateY(-2rem);
   opacity: 0;
 }
+
+.fade-enter-active {
+  transition: opacity 300ms ease-out;
+}
+
+.fade-leave-active {
+  transition: opacity 200ms ease-in;
+}
+
+.fade-leave,
+.fade-enter-to {
+  opacity: 1;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-scale-in {
+  transform-origin: top right;
+  animation-name: fade-scale-in;
+  animation-duration: 300ms;
+  animation-delay: 100ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+
+.fade-scale-out {
+  transform-origin: top right;
+  animation-name: fade-scale-out;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
+}
+
+@keyframes fade-scale-in {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-scale-out {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
