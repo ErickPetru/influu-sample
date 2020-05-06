@@ -1,6 +1,42 @@
 <script>
 export default {
-  name: 'Index'
+  name: 'Index',
+  async asyncData ({ $axios }) {
+    const influencer = await $axios({
+      method: 'post',
+      data: {
+        query: `
+          query getInfluencer {
+            getInfluencer {
+              name
+              about
+              imageUrl
+              youtube {
+                username
+                followers
+              }
+              instagram {
+                username
+                followers
+              }
+              facebook {
+                username
+                followers
+              }
+              twitter {
+                username
+                followers
+              }
+            }
+          }
+        `
+      }
+    })
+
+    return {
+      influencer: influencer.data ? influencer.data.data.getInfluencer : null
+    }
+  }
 }
 </script>
 
