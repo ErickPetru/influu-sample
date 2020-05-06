@@ -40,6 +40,10 @@ export default {
     // Doc: https://github.com/nuxt-community/axios-module
     '@nuxtjs/axios'
   ],
+  router: {
+    linkExactActiveClass: 'link-exact-active',
+    linkActiveClass: 'link-active'
+  },
   axios: {
     baseURL: 'https://influu-api.herokuapp.com/graphql'
   },
