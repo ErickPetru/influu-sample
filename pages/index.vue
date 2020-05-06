@@ -1,6 +1,10 @@
 <script>
 export default {
   name: 'Index',
+  components: {
+    Header: () => import('~/components/Header'),
+    Footer: () => import('~/components/Footer')
+  },
   async asyncData ({ $axios }) {
     const influencer = await $axios({
       method: 'post',
@@ -41,9 +45,15 @@ export default {
 </script>
 
 <template>
-  <main id="index">
-    <div class="container max-w-screen-xl">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eius labore laborum ut cumque neque, magnam dignissimos animi alias voluptatibus optio? Similique beatae laboriosam vero eum deserunt possimus velit reprehenderit.</p>
-    </div>
-  </main>
+  <div>
+    <Header :influencer="influencer" />
+
+    <main id="index">
+      <div class="container max-w-screen-xl">
+        <p v-if="influencer && influencer.about">{{ influencer.about }}</p>
+      </div>
+    </main>
+
+    <Footer />
+  </div>
 </template>
