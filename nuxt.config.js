@@ -75,8 +75,8 @@ export default {
         'Roboto:n3,n4,n5'
       ],
       urls: [
-        'https://fonts.googleapis.com/css?family=Ubuntu:300,400,500&display=fallback',
-        'https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=fallback'
+        'https://fonts.googleapis.com/css?family=Ubuntu:300,400,500&display=swap',
+        'https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap'
       ]
     }
   },
