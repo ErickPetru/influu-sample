@@ -6,9 +6,18 @@ body {
 
 @responsive {
   .transition-default {
-    @apply transition-colors;
     @apply duration-300;
     @apply ease-in-out;
+    transition-property:
+      background-color,
+      border-color,
+      color,
+      fill,
+      stroke,
+      opacity,
+      box-shadow,
+      transform,
+      overflow-color;
   }
 
   .hoverable {
