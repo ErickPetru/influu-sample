@@ -6,4 +6,5 @@
 @import 'tailwindcss/utilities';
 
 @import './variables';
+@import './transitions';
 @import './base';

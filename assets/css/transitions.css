@@ -1,0 +1,25 @@
+.slide-y-enter-active,
+.slide-y-leave-active {
+  position: absolute;
+  transform-origin: top;
+}
+
+.slide-y-enter-active {
+  transition: all 300ms ease-out;
+}
+
+.slide-y-leave-active {
+  transition: all 200ms ease-in;
+}
+
+.slide-y-leave,
+.slide-y-enter-to {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.slide-y-enter,
+.slide-y-leave-to {
+  transform: translateY(-2rem);
+  opacity: 0;
+}
