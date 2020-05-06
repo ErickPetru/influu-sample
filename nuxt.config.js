@@ -76,6 +76,11 @@ export default {
       ]
     }
   },
+  tailwindcss: {
+    configPath: './tailwind.config.cjs',
+    cssPath: './assets/css/tailwind.css',
+    exposeConfig: false
+  },
   purgeCSS: {
     content: [
       './components/**/*.vue',
